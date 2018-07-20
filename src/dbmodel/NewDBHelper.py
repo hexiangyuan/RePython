@@ -3,11 +3,13 @@ from pymongo import MongoClient
 
 class NewDBHelper:
 
-    def insert_news(self, new_item_array):
+    def __init__(self):
         client = MongoClient('127.0.0.1', 27017)
         database = 'test_new'
         db = client[database]
-        newdb = db.lottery_news
+        self.newdb = db.lottery_news
+
+    def insert_news(self, new_item_array):
         new_list = []
         for item in new_item_array:
             new_item = {
@@ -16,10 +18,11 @@ class NewDBHelper:
                 "description": item.description_string,
                 "img": item.img_string,
                 "link": item.link_string,
+                "time": item.time_string,
                 "view_count": item.view_count_int,
                 "new_source": item.new_source_int}
             new_list.append(new_item)
 
         print(new_list)
-        result = newdb.insert_many(new_list)
+        result = self.newdb.insert_many(new_list)
         print(result)

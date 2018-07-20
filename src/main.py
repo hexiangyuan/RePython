@@ -37,19 +37,18 @@ def get_toutiao_news():
             link = child.find("a", "newsLink clearfix ").get("href")
             h2_text = child.find('h2').string
             p_text = child.find("p").string
-            if img_src is None:
-                img_src = ""
-            if h2_text is None:
-                h2_text = ""
-            if p_text is None:
-                p_test = ""
             if time is None:
                 time = ""
-            if link is None:
-                link = ""
-            item = MNewItem(1, h2_text, p_text, img_src, link, 0, 1)
-            news.append(item)
+            else:
+                time = time.string
+            item = MNewItem(1, h2_text, p_text, img_src, link, 0, time, 1)
+            if not filter_new(item):
+                news.append(item)
         dbhelper.insert_news(news)
+
+
+def filter_new(new_item):
+    return "免费下载" in new_item.title_string or "交流群" in new_item.title_string or "官方" in new_item.title_string
 
 
 if __name__ == '__main__':
