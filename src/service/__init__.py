@@ -32,7 +32,7 @@ def get_lottery_new_types():
 
 
 @app.route("/lottery_new/get_news_list", methods=["GET", "POST"])
-def hello_flask():
+def get_news_list():
     db_helper = NewDBHelper()
     result = db_helper.find_news(0)
     data = []
