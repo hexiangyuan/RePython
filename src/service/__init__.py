@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 from src.Utils import get_source_by_id
 from src.dbmodel.NewDBHelper import NewDBHelper
@@ -33,8 +33,10 @@ def get_lottery_new_types():
 
 @app.route("/lottery_new/get_news_list", methods=["GET", "POST"])
 def get_news_list():
+    type_id = request.args.get('type')
+    page_index = request.args.get('page_index')
     db_helper = NewDBHelper()
-    result = db_helper.find_news(0)
+    result = db_helper.find_news({"type": int(type_id)}, int(page_index))
     data = []
     for i in result:
         new = {

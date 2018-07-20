@@ -27,9 +27,9 @@ class NewDBHelper:
         result = self.newdb.insert_many(new_list)
         print(result)
 
-    def find_news(self, page_index):
+    def find_news(self, filter_limit, page_index):
         skip = 20 * page_index
-        find_result = self.newdb.find({}).limit(20).skip(skip)
+        find_result = self.newdb.find(filter_limit).limit(20).skip(skip)
         return find_result
 
     def delete_all(self):
