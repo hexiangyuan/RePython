@@ -16,8 +16,19 @@ def random_user_agent():
     return uas[index]
 
 
+filter_key_worlds = [
+    "下载",
+    "交流群",
+    "官方",
+    "网易",
+]
+
+
 def filter_new(new_item):
-    return "免费下载" in new_item.title_string or "交流群" in new_item.title_string or "官方" in new_item.title_string
+    for i in filter_key_worlds:
+        if i in new_item.title_string:
+            return True
+    return False
 
 
 sources = [
@@ -32,3 +43,61 @@ def get_source_by_id(source_id):
             return i['name']
 
     return ""
+
+
+# toutiao ssq nba dlt cba jingcai news world china
+lottery_types = [
+    {
+        "id": 1,
+        "value": "toutiao",
+        "name": "热门头条"
+    },
+    {
+        "id": 2,
+        "value": "nba",
+        "name": "篮球NBA"
+    },
+    {
+        "id": 3,
+        "value": "cba",
+        "name": "篮球CBA"
+    },
+    {
+        "id": 4,
+        "value": "world",
+        "name": "国际足球"
+    },
+    {
+        "id": 5,
+        "value": "china",
+        "name": "中国足球"
+    },
+    {
+        "id": 6,
+        "value": "dlt",
+        "name": "大乐透"
+    },
+    {
+        "id": 7,
+        "value": "news",
+        "name": "彩市行情"
+    },
+    {
+        "id": 8,
+        "value": "ssq",
+        "name": "双色球"
+    },
+    {
+        "id": 9,
+        "value": "dlt",
+        "name": "大乐透"
+    },
+
+]
+
+
+def get_lottery_type_by_value(value):
+    for i in lottery_types:
+        if value == i["value"]:
+            return i["id"]
+    return 1

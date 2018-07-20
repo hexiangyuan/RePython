@@ -2,7 +2,7 @@ from flask import Flask
 import requests
 import bs4
 
-from src.Utils import random_user_agent, filter_new
+from src.Utils import random_user_agent, filter_new, lottery_types, get_lottery_type_by_value
 from src.dbmodel.MNewItem import MNewItem
 from src.dbmodel.NewDBHelper import NewDBHelper
 
@@ -27,8 +27,8 @@ def get_html(url):
         return None
 
 
-def get_hot_news():
-    url_text = 'http://zxwap.caipiao.163.com/toutiao?loadMoreTimes=0'
+def get_163_news(new_type, page_index):
+    url_text = 'http://zxwap.caipiao.163.com/' + new_type + '?loadMoreTimes=' + str(page_index)
     html_text = get_html(url_text)
     if html_text is not None:
         s = bs4.BeautifulSoup(html_text, 'lxml')
@@ -40,11 +40,12 @@ def get_hot_news():
             link = child.find("a", "newsLink clearfix ").get("href")
             h2_text = child.find('h2').string
             p_text = child.find("p").string
+            type_id = get_lottery_type_by_value(new_type)
             if time is None:
                 time = ""
             else:
                 time = time.string
-            item = MNewItem(1, h2_text, p_text, img_src, link, 0, time, 1)
+            item = MNewItem(type_id, h2_text, p_text, img_src, link, 0, time, 1)
             if not filter_new(item):
                 news.append(item)
         insert_news_into_db(news)
@@ -55,5 +56,13 @@ def insert_news_into_db(news):
     db_helper.insert_news(news)
 
 
+def spider_lottery_news():
+    for type_item in lottery_types:
+        for i in range(0, 1):
+            get_163_news(type_item["value"], i)
+
+
 if __name__ == '__main__':
-    get_hot_news()
+    db = NewDBHelper()
+    db.delete_all()
+    spider_lottery_news()
