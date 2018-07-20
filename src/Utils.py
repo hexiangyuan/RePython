@@ -18,3 +18,17 @@ def random_user_agent():
 
 def filter_new(new_item):
     return "免费下载" in new_item.title_string or "交流群" in new_item.title_string or "官方" in new_item.title_string
+
+
+sources = [
+    {"id": 1,
+     "name": "网易新闻"}
+]
+
+
+def get_source_by_id(source_id):
+    for i in sources:
+        if source_id == i['id']:
+            return i['name']
+
+    return ""
