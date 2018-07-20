@@ -1,6 +1,6 @@
 from flask import Flask, request
 
-from src.Utils import get_source_by_id
+from src.Utils import get_source_by_id, lottery_types
 from src.dbmodel.NewDBHelper import NewDBHelper
 from bson.json_util import dumps
 
@@ -11,22 +11,7 @@ app = Flask(__name__)
 def get_lottery_new_types():
     response = {
         "code": 200,
-        "data": [{
-            "id": 1,
-            "name": "热门头条"
-        }, {
-            "id": 2,
-            "name": "足球"
-        }, {
-            "id": 3,
-            "name": "足球"
-        }, {
-            "id": 4,
-            "name": "足球"
-        }, {
-            "id": 5,
-            "name": "足球"
-        }]
+        "data": lottery_types
     }
     return dumps(response, ensure_ascii=False)
 
