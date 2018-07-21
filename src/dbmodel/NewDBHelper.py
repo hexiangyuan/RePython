@@ -24,8 +24,9 @@ class NewDBHelper:
             new_list.append(new_item)
 
         print(new_list)
-        result = self.newdb.insert_many(new_list)
-        print(result)
+        if len(new_list) != 0:
+            result = self.newdb.insert_many(new_list)
+            print(result)
 
     def find_news(self, filter_limit, page_index):
         skip = 20 * page_index
