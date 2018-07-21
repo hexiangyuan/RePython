@@ -59,7 +59,7 @@ def insert_news_into_db(news):
 
 def spider_lottery_news():
     for type_item in lottery_types:
-        for i in range(0, 1):
+        for i in range(0, 10):
             get_163_news(type_item["value"], i)
 
 
