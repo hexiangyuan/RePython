@@ -44,7 +44,4 @@ def get_news_list():
 
 
 if __name__ == '__main__':
-    import sys
-    reload(sys)
-    sys.setdefaultencoding('utf8')
     app.run(host='0.0.0.0', port=5000)

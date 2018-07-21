@@ -35,4 +35,4 @@ class NewDBHelper:
 
     def delete_all(self):
         result = self.newdb.delete_many({})
-        print("删除数据")
+        print(str("删除数据"))
