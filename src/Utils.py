@@ -86,13 +86,7 @@ lottery_types = [
         "id": 8,
         "value": "ssq",
         "name": "双色球"
-    },
-    {
-        "id": 9,
-        "value": "dlt",
-        "name": "大乐透"
-    },
-
+    }
 ]
 
 
