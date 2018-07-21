@@ -64,6 +64,9 @@ def spider_lottery_news():
 
 
 if __name__ == '__main__':
+    import sys
+    reload(sys)
+    sys.setdefaultencoding('utf8')
     db = NewDBHelper()
     db.delete_all()
     spider_lottery_news()
