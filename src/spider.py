@@ -2,9 +2,9 @@ from flask import Flask
 import requests
 import bs4
 
-from src.service.Utils import random_user_agent, filter_new, lottery_types, get_lottery_type_by_value
-from src.dbmodel.MNewItem import MNewItem
-from src.dbmodel.NewDBHelper import NewDBHelper
+from Utils import random_user_agent, filter_new, lottery_types, get_lottery_type_by_value
+from MNewItem import MNewItem
+from NewDBHelper import NewDBHelper
 
 app = Flask(__name__)
 
@@ -29,6 +29,7 @@ def get_html(url):
 
 def get_163_news(new_type, page_index):
     url_text = 'http://zxwap.caipiao.163.com/' + new_type + '?loadMoreTimes=' + str(page_index)
+    print(url_text)
     html_text = get_html(url_text)
     if html_text is not None:
         s = bs4.BeautifulSoup(html_text, 'lxml')

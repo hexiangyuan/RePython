@@ -1,8 +1,9 @@
 from flask import Flask, request
 
-from src.service.Utils import get_source_by_id, lottery_types
-from src.dbmodel.NewDBHelper import NewDBHelper
 from bson.json_util import dumps
+
+from NewDBHelper import NewDBHelper
+from Utils import *
 
 app = Flask(__name__)
 
