@@ -2,7 +2,7 @@ from flask import Flask
 import requests
 import bs4
 
-from src.commom.Utils import random_user_agent, filter_new, lottery_types, get_lottery_type_by_value
+from src.service.Utils import random_user_agent, filter_new, lottery_types, get_lottery_type_by_value
 from src.dbmodel.MNewItem import MNewItem
 from src.dbmodel.NewDBHelper import NewDBHelper
 
