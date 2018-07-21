@@ -43,7 +43,7 @@ def get_163_news(new_type, page_index):
             p_text = child.find("p").string
             type_id = get_lottery_type_by_value(new_type)
             if time is not None:
-                item = MNewItem(type_id, h2_text, p_text, img_src, link, 0, time, 1)
+                item = MNewItem(type_id, h2_text, p_text, img_src, link, 0, time.string, 1)
                 if not filter_new(item):
                     news.append(item)
         insert_news_into_db(news)
