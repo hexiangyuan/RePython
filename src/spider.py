@@ -64,6 +64,10 @@ def spider_lottery_news():
 
 
 if __name__ == '__main__':
+    import sys
+    import io
+
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     db = NewDBHelper()
     db.delete_all()
     spider_lottery_news()

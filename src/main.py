@@ -44,4 +44,8 @@ def get_news_list():
 
 
 if __name__ == '__main__':
+    import sys
+    import io
+
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     app.run(host='0.0.0.0', port=5000)
