@@ -10,10 +10,13 @@ app = Flask(__name__)
 
 @app.route("/lottery_new/get_news_types", methods=["GET", "POST"])
 def get_lottery_new_types():
-    response = {
-        "code": 200,
-        "data": lottery_types
-    }
+    response = {"code": 200, "data": lottery_types}
+    return dumps(response, ensure_ascii=False)
+
+
+@app.route("/lottery_new/get_news_banner", methods=["GET", "POST"])
+def get_news_banners():
+    response = {"code": 200, "data": lottery_new_banners}
     return dumps(response, ensure_ascii=False)
 
 
@@ -36,10 +39,7 @@ def get_news_list():
         }
         data.append(new)
 
-    response = {
-        "code": 200,
-        "data": data
-    }
+    response = {"code": 200, "data": data}
     return dumps(response, ensure_ascii=False)
 
 

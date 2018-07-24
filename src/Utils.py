@@ -31,10 +31,7 @@ def filter_new(new_item):
     return False
 
 
-sources = [
-    {"id": 1,
-     "name": "网易新闻"}
-]
+sources = [{"id": 1, "name": "网易新闻"}]
 
 
 def get_source_by_id(source_id):
@@ -46,48 +43,68 @@ def get_source_by_id(source_id):
 
 
 # toutiao ssq nba dlt cba jingcai news world china
-lottery_types = [
-    {
-        "id": 1,
-        "value": "toutiao",
-        "name": "热门头条"
-    },
-    {
-        "id": 2,
-        "value": "nba",
-        "name": "篮球NBA"
-    },
-    {
-        "id": 3,
-        "value": "cba",
-        "name": "篮球CBA"
-    },
-    {
-        "id": 4,
-        "value": "world",
-        "name": "国际足球"
-    },
-    {
-        "id": 5,
-        "value": "china",
-        "name": "中国足球"
-    },
-    {
-        "id": 6,
-        "value": "dlt",
-        "name": "大乐透"
-    },
-    {
-        "id": 7,
-        "value": "news",
-        "name": "彩市行情"
-    },
-    {
-        "id": 8,
-        "value": "ssq",
-        "name": "双色球"
-    }
-]
+lottery_types = [{
+    "id": 1,
+    "value": "toutiao",
+    "name": "热门头条"
+}, {
+    "id": 2,
+    "value": "nba",
+    "name": "篮球NBA"
+}, {
+    "id": 3,
+    "value": "cba",
+    "name": "篮球CBA"
+}, {
+    "id": 4,
+    "value": "world",
+    "name": "国际足球"
+}, {
+    "id": 5,
+    "value": "china",
+    "name": "中国足球"
+}, {
+    "id": 6,
+    "value": "dlt",
+    "name": "大乐透"
+}, {
+    "id": 7,
+    "value": "news",
+    "name": "彩市行情"
+}, {
+    "id": 8,
+    "value": "ssq",
+    "name": "双色球"
+}]
+
+lottery_new_banners = [{
+    "title":
+    "中国彩票行业每周动态",
+    "img":
+    "http://om6hh53na.bkt.clouddn.com/Screen%20Shot%202018-07-24%20at%2010.39.37%20AM.png",
+    "link":
+    "http://zxwap.caipiao.163.com/hangye/article/18/0716/15/DMRK087Q000597U8.html"
+}, {
+    "title":
+    "辽宁彩民揽七乐彩1134222元",
+    "img":
+    "http://zxwap.caipiao.163.com/hangye/article/18/0723/15/DNDJPF9J000597U8.html",
+    "link":"http://zxwap.caipiao.163.com/hangye/article/18/0723/15/DNDJPF9J000597U8.html"
+}, {
+    "title":
+    "财政部:5月全国彩票销406亿",
+    "img":
+    "http://img6.cache.netease.com/sports/2015/1/9/20150109104322ac429.jpg",
+    "link":
+    "http://zxwap.caipiao.163.com/hangye/article/18/0630/07/DLHJHNC0000597U8.html"
+}, {
+    "title":
+    "湖人旧将:杜兰特快来湖人吧",
+    "img":
+    "http://img3.cache.netease.com/sports/2016/6/5/20160605075602bad21.jpg",
+    "link":
+    "http://zxwap.caipiao.163.com/nba/article/16/0605/07/BOPHTAKQ00051CA1.html"
+}]
 
 
 def get_lottery_type_by_value(value):
