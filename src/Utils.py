@@ -88,20 +88,20 @@ lottery_new_banners = [{
     "title":
     "辽宁彩民揽七乐彩1134222元",
     "img":
-    "http://zxwap.caipiao.163.com/hangye/article/18/0723/15/DNDJPF9J000597U8.html",
+    "http://om6hh53na.bkt.clouddn.com/img_got_it",
     "link":"http://zxwap.caipiao.163.com/hangye/article/18/0723/15/DNDJPF9J000597U8.html"
 }, {
     "title":
-    "财政部:5月全国彩票销406亿",
+    "财政部:全国彩票销406亿",
     "img":
-    "http://img6.cache.netease.com/sports/2015/1/9/20150109104322ac429.jpg",
+    "http://om6hh53na.bkt.clouddn.com/up.jpg",
     "link":
     "http://zxwap.caipiao.163.com/hangye/article/18/0630/07/DLHJHNC0000597U8.html"
 }, {
     "title":
     "湖人旧将:杜兰特快来湖人吧",
     "img":
-    "http://img3.cache.netease.com/sports/2016/6/5/20160605075602bad21.jpg",
+    "http://om6hh53na.bkt.clouddn.com/dulante.jpg",
     "link":
     "http://zxwap.caipiao.163.com/nba/article/16/0605/07/BOPHTAKQ00051CA1.html"
 }]
