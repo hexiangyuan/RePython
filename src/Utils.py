@@ -112,3 +112,16 @@ def get_lottery_type_by_value(value):
         if value == i["value"]:
             return i["id"]
     return 1
+
+
+def generate_gid():
+    gids = []
+    for number in range(100000, 10000000):
+        gids.append(number)
+    for gid in gids:
+        index0 = random.randint(0, len(gids) - 1)
+        index1 = len(gids) - 1
+        tmp = gids[index0]
+        gids[index0] = gids[index1]
+        gids[index1] = tmp
+    return gids.pop()
