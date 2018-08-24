@@ -4,7 +4,7 @@ from bson.json_util import dumps
 
 from NewDBHelper import NewDBHelper
 from AccountDBHelp import AccountDBHelp
-from User import User
+from user import User
 from Utils import *
 from RegexUtils import *
 import uuid

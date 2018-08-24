@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from User import User
+from user import User
 
 
 class AccountDBHelp:
