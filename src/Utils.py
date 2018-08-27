@@ -63,40 +63,28 @@ lottery_types = [{
     "id": 5,
     "value": "china",
     "name": "中国足球"
-}, {
-    "id": 6,
-    "value": "dlt",
-    "name": "大乐透"
-}, {
-    "id": 7,
-    "value": "news",
-    "name": "彩市行情"
-}, {
-    "id": 8,
-    "value": "ssq",
-    "name": "双色球"
 }]
 
 lottery_new_banners = [{
     "title":
-    "中国彩票行业每周动态",
+    "男子百米苏炳添无悬念夺冠",
     "img":
-    "http://om6hh53na.bkt.clouddn.com/Screen%20Shot%202018-07-24%20at%2010.39.37%20AM.png",
+    "https://pic-bucket.nosdn.127.net/photo/0005/2018-08-26/DQ61OP5C06JC0005NOS.jpg?imageView&thumbnail=750x0&quality=85&type=jpg&interlace=1",
     "link":
-    "http://zxwap.caipiao.163.com/hangye/article/18/0716/15/DMRK087Q000597U8.html"
+    "https://3g.163.com/sports/article/DQ5UD5DP00058782.html"
 }, {
     "title":
-    "辽宁彩民揽七乐彩1134222元",
+    "中国加时绝杀韩国夺冠",
     "img":
-    "http://om6hh53na.bkt.clouddn.com/img_got_it",
-    "link":"http://zxwap.caipiao.163.com/hangye/article/18/0723/15/DNDJPF9J000597U8.html"
+    "https://cms-bucket.nosdn.127.net/2018/08/26/1d2a73c55fb549ae9f866e65cba386d5.jpeg?imageView&thumbnail=750x0&quality=85&type=jpg&interlace=1",
+    "link":"https://3g.163.com/sports/article/DQ5ULNNS0005877V.html?clickfrom=channel2018_sports_index_newslist#child=index&offset=3"
 }, {
     "title":
-    "财政部:全国彩票销406亿",
+    "国羽亚运会无人进四强",
     "img":
-    "http://om6hh53na.bkt.clouddn.com/up.jpg",
+    "https://pic-bucket.nosdn.127.net/photo/0005/2018-08-26/DQ5BOHN40AQ30005NOS.jpg?imageView&thumbnail=75y75&quality=85&type=webp&interlace=1&enlarge=1",
     "link":
-    "http://zxwap.caipiao.163.com/hangye/article/18/0630/07/DLHJHNC0000597U8.html"
+    "https://3g.163.com/sports/article/DQ5A4K6P00058782.html?clickfrom=channel2018_sports_index_newslist#child=index&offset=4"
 }, {
     "title":
     "湖人旧将:杜兰特快来湖人吧",
