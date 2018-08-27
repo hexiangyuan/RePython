@@ -32,13 +32,13 @@ def login():
     user_db = AccountDBHelp()
     find_result = user_db.account_collection.find_one({"name": user_name})
     if find_result is None:
-        response = {"code": 500, "resultMsg": "用户名不存在"}
+        response = {"code": 500, "msg": "用户名不存在"}
         return dumps(response, ensure_ascii=False)
 
     if find_result["password"] == pass_word:
         response = {"code": 200, "data": {"id": find_result["user_id"]}}
     else:
-        response = {"code": 500, "resultMsg": "帐号和密码不匹配"}
+        response = {"code": 500, "msg": "帐号和密码不匹配"}
     return dumps(response, ensure_ascii=False)
 
 
@@ -57,7 +57,7 @@ def register():
     user_db = AccountDBHelp()
     find_result = user_db.account_collection.find_one({"name": user_name})
     if find_result is not None:
-        response = {"code": 500, "resultMsg": "用户名重复"}
+        response = {"code": 500, "msg": "用户名重复"}
         return dumps(response, ensure_ascii=False)
     user_id = uuid.uuid1()
     user = User(user_id.int, user_name, pass_word)
@@ -65,6 +65,7 @@ def register():
     response = {"code": 200, "data": {"id": str(user_id.int)}}
     return dumps(response, ensure_ascii=False)
 
+@app.route("/lottery_new/user_get_favorate")
 
 @app.route("/lottery_new/get_news_list", methods=["GET", "POST"])
 def get_news_list():
